@@ -5,6 +5,6 @@
 
 Скачать и установить на своей локальной машине не составит никакого труда, всё довольно стандартно:
 
-git clone
-npm install
-npm start
+1. git clone
+2. npm install
+3. npm start
