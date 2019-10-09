@@ -1,0 +1,19 @@
+form {
+    display: inline;
+}
+.app{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:  70em
+}
+.app-buttons{
+    margin-top: 20px;
+}
+.app-search{
+    margin-left: 2px
+}
+.open{
+    margin-top: 60px
+}
