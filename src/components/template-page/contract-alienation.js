@@ -4,6 +4,7 @@ import ContractAlienationText from '../template-page-text/contract-alienation-te
 import Input from '../template-page-form-helper/input';
 import {day, month, year} from '../template-page-form-helper/select-item';
 import Select from '../template-page-form-helper/select';
+import './template-page.css';
 
 const ContractAlienationForm = ({changeData}) => {
 

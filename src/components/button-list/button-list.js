@@ -44,7 +44,7 @@ const ButtonList = () => (
             <br/>
             <div className="row">
                 <div className="col-md-3">
-                    <Link to='.....'>
+                    <Link to='/contract-alienation'>
                         <button type='button' className="btn btn-info btn-lg btn-block btn-huge">
                             Договор об <br/> отчуждении <br/> исключительного права
                         </button>

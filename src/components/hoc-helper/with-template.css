@@ -1,0 +1,11 @@
+.button-print{
+    margin-top: 20px;
+    float: right;
+    margin-right: 80px
+}
+.text{
+    overflow: scroll;
+    padding: 7px;
+    border: 1px solid black;
+    height: 300px
+}

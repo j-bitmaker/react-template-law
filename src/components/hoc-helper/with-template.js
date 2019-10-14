@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
-
+import ButtonPrint from '../button-print';
+import './with-template.css'
 
 const WithTemplate = (Form, Text, ...fields) =>{
 
 return class extends Component{
-	state= {};	
+
+		state= {};	
+		refHOC = React.createRef();
+
 	
     componentDidMount(){
 		const allFields = {};
@@ -13,9 +17,16 @@ return class extends Component{
 				allFields[prop] = obj[prop];
 			}
 		});
-		
-		this.setState({...this.mainObj, ...allFields})
+		this.setState({
+			...this.mainObj, //объект для всех шаблонов
+			...allFields, //объекты лишь для определённых шаблонов
+			currentHeight: this.refHOC.current.offsetHeight 
+			//через React.createRef() определяем высоту div'а с текстом и приравниваем её к высоте div'а с полями ввода
+		});
+	
+
 	}
+
 	
 	
 	mainObj = {
@@ -37,22 +48,28 @@ return class extends Component{
 	}
 	
 	changeData = (e) => {
-		console.log(e.target);
+
 		const prop = e.target.id; //Id of same input (className="form-control") equals key of object key
 		const stateObj = {};
 		stateObj[prop] = e.target.value; //e.target.id==prop==ключ в state
+		stateObj.refId = prop
 		this.setState(stateObj);
+		console.log(this.state.refId)
 	}
 
 
     render(){
+		console.log(this.props);
 		return (
 			<div className="row">
-				<div className="col">
-					<Form changeData={this.changeData}/> 
+				<div className="col" ref={this.refHOC}>
+					<Form changeData={this.changeData}/>
+					<div className='button-print'>
+						<ButtonPrint/>
+					</div> 
 				</div>
-				<div className="col">
-					<Text data={this.state} />
+				<div className="col text" style={{height: this.state.currentHeight}}>
+					<Text data={this.state}/>
 				</div>
 			</div>
 		)
