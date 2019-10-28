@@ -5,6 +5,7 @@ import ModelSecure from './model-secure';
 import OrderPO from './order-po';
 import OrderPD from './order-pd';
 import ContractAlienation from './contract-alienation';
+import EmptyComp from './confident'
 
 export {ContractPO, ContractLicense, ContractAlienation,
-     Confident, ModelSecure, OrderPO, OrderPD};
+     Confident, ModelSecure, OrderPO, OrderPD, EmptyComp};

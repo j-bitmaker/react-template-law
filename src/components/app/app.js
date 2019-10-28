@@ -4,7 +4,7 @@ import Navbar from '../navbar';
 import ButtonList from '../button-list/';
 import HelpPage from '../help-page';
 import {ContractPO, ContractLicense, ContractAlienation, Confident, 
-    ModelSecure, OrderPO, OrderPD} from '../template-page';  
+    ModelSecure, OrderPO, OrderPD, EmptyComp} from '../template-page';  
 import './app.css';
 
 
@@ -25,6 +25,7 @@ const App = () => {
                             <Route path="/order-po" component={OrderPO} />
                             <Route path="/contract-alienation" component={ContractAlienation} />
                             <Route path="/order-pd" component={OrderPD}/>
+                            <Route path="/empty-comp" component={EmptyComp}/>
                         </div>
                     </div>
             </Router>

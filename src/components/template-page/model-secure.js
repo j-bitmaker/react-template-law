@@ -1,9 +1,9 @@
 import React from 'react';
-import WithTemplate from '../hoc-helper/with-template';
+import WithTemplate from '../helper-hoc/with-template';
 import ModelSecureText from '../template-page-text/model-secure-text';
-import Input from '../template-page-form-helper/input';
-import {day, month, year} from '../template-page-form-helper/select-item';
-import Select from '../template-page-form-helper/select';
+import Input from '../helper-form/input';
+import {day, month, year} from '../helper-form/select-item';
+import Select from '../helper-form/select';
 
 const ModelSecureForm = ({changeData}) => {
 

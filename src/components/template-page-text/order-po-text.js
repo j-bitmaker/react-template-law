@@ -1,8 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './template-page-text.css';
 
-const OrderPOText = () =>{
+export default class OrderPO extends Component {
+render(){
+
+    const {city, day, month, year, //общая инфа
+
+        name_1, address_1, index_1, phone_num_1, e_mail_1, 
+        pasport_num_1, pasport_from_1, 
+        pasport_date_1, pasport_code_1,
+
+        legal_address_1, INN_1, KPP_1, ORGN_1, 
+        pay_account_1, cor_account_1, BIK_1, //инфа по первому субъекту
+
+        name_2, address_2, index_2, phone_num_2, e_mail_2, 
+        pasport_num_2, pasport_from_2, 
+        pasport_date_2, pasport_code_2,//инфа по второму субъекту
+    
+        scroll //наменование части текста, которая станет видимой для пользователя в момент введения данных в поле
+    } = this.props.data;
+
+    if (scroll==='star'){
+        this.scroll.current.scrollIntoView({block: "end"})
+    }
+    if(scroll==='end'){
+        this.end.current.scrollIntoView({block: "end"})
+    }
+    
     return(
-    <div>
+    <div className='template'>
 <p>
     <strong>ДОГОВОР N ___________</strong>
 </p>
@@ -284,23 +310,44 @@ const OrderPOText = () =>{
     10.4. Настоящий Договор составлен в 2-х экземплярах, по одному для каждой
     из сторон. Оба экземпляра имеют одинаковую силу.
 </p>
-<p>
-    <strong>11. Банковские реквизиты и адреса сторон</strong>
-</p>
-<p>
-    Подписи сторон:
-</p>
-<p>
-    _______________________ ________________________
-</p>
-<p>
-    "__" ___________ 20__ г. "__" ___________ 20__ г.
-</p>
-<p>
-    МП МП
-</p>
+    <div ref={this.end}>   
+            <p>
+                <strong>5. Адреса и реквизиты сторон</strong>
+            </p>
+            <p>
+            <strong>Раскрывающая сторона</strong> <br/>
+            Почтовый адрес: {address_1}; 
+            Телефон: {phone_num_1}; <br/>
+            Почтовый индекс: {index_1}; E-mail: {e_mail_1};<br/>
+            Паспорт. Серия/Номер/Выдан: {pasport_num_1} {pasport_from_1} <br/>
+            Дата выдачи: {pasport_date_1}  <br/>
+            Код подразделения: {pasport_code_1} <br/>
+            Юридический адрес: {legal_address_1}; <br/>
+            ИНН: {INN_1}; 
+            КПП: {KPP_1}; 
+            ОГРН: {ORGN_1}; <br/>
+            Расчетный счет: {pay_account_1} к/с Корреспондентский счет: {cor_account_1}; 
+            БИК: {BIK_1}
+            </p>
+            <p>
+            ___________________ / ________________________________________/
+
+            </p>
+            <p>
+            <strong>Принимающая сторона</strong> <br/> <br/>
+            Почтовый адрес: {address_2}; 
+            Телефон: {phone_num_2}; <br/>
+            Почтовый индекс: {index_2}; E-mail: {e_mail_2};<br/>
+            Паспорт. Серия/Номер/Выдан: {pasport_num_2} {pasport_from_2} <br/>
+            Дата выдачи: {pasport_date_2} <br/>
+            Код подразделения: {pasport_code_2}
+            <br/><br/>
+
+            ___________________ / ________________________________________/
+            </p>
+        </div>
     </div>
     )
 }
 
-export default OrderPOText;
+}

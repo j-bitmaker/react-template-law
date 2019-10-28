@@ -29,14 +29,14 @@ const ButtonList = () => (
                 <div className="col-md-3"> 
                     <Link to='/contract-license'>
                         <button type="button" id='contract-license' className="btn btn-info btn-lg btn-block btn-huge">
-                            <br/>Лицензионный договор <br/> - 
+                            <br/>Лицензионный договор <br/> &nbsp; 
                         </button>
                     </Link>
                 </div>
                 <div className="col-md-3">
-                    <Link to="/contract-author">
+                    <Link to="/order-po">
                     <button type='button' id='cotract-author' className="btn btn-light btn-lg btn-block btn-huge">
-                        Договор авторского <br/>заказа <br/> - 
+                        Договор авторского <br/>заказа <br/> &nbsp; 
                     </button>
                     </Link>
                 </div>
@@ -51,7 +51,7 @@ const ButtonList = () => (
                     </Link>
                 </div>
                 <div className="col-md-3">
-                    <Link to='order-po'>
+                    <Link to='contract-po'>
                         <button type='button' id="contract-po" className="btn btn-light btn-lg btn-block btn-huge">
                             Договор на <br/> разработку <br/> программного обеспечения
                         </button>
@@ -70,14 +70,14 @@ const ButtonList = () => (
                     <div className="col-md-3">
                         <Link to="/personal-data-list">
                             <button type='button' className="btn btn-primary btn-lg btn-block btn-huge">
-                                Перечень <br/> персональных данных
+                               <br/> Перечень <br/> персональных данных <br/> &nbsp; 
                             </button>
                         </Link>
                     </div>
                 <div className="col-md-3">
                     <Link to='/contract-alienation'>
                         <button type='button' className="btn btn-secondary btn-lg btn-block btn-huge">
-                            Договор об отчуждении <br/> исключительных прав
+                            <br/> Договор об отчуждении <br/> исключительных прав <br/> &nbsp; 
                         </button>
                     </Link>
                 </div>

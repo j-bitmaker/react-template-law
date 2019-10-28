@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-pdf/renderer": "^1.6.7",
+    "jspdf": "^1.5.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
@@ -29,4 +31,5 @@
       "last 1 safari version"
     ]
   }
+ 
 }
