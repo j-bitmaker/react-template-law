@@ -1,5 +1,12 @@
 .button-list{
     margin-left: auto;
     margin-right: auto;
-    width: 90em
+    width: 90%
+}
+.header{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 3
+
+
 }
