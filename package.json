@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^1.6.7",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
